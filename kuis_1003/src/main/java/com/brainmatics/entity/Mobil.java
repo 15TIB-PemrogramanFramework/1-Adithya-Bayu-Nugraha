@@ -6,12 +6,13 @@
 package com.brainmatics.entity;
 
 import java.io.Serializable;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -31,8 +32,7 @@ public class Mobil implements Serializable {
     private String stock;
     @Column(length = 255, nullable = true)
     private String tahun;
-    @ManyToOne
-    private Mobil mobil;
+    @OneToMany(mappedBy = "mobil_category", cascade = CascadeType.ALL)
 
     public Long getId() {
         return id;
@@ -45,6 +45,7 @@ public class Mobil implements Serializable {
     /**
      * @return the model
      */
+    @Id
     public String getModel() {
         return model;
     }
