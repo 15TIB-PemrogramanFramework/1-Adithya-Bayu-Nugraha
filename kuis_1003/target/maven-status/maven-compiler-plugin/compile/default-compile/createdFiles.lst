@@ -1,0 +1,9 @@
+com\brainmatics\repo\AksesorisRepo.class
+com\brainmatics\Kuis_1003Aplication.class
+com\brainmatics\repo\MobilRepo.class
+com\brainmatics\service\MobilService.class
+com\brainmatics\entity\Aksesoris.class
+com\brainmatics\controller\AksesorisController.class
+com\brainmatics\entity\Mobil.class
+com\brainmatics\controller\MobilController.class
+com\brainmatics\service\AksesorisService.class
